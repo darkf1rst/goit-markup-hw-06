@@ -455,6 +455,58 @@
             <use href="images/symbol-def.svg#icon-close"></use>
           </svg>
         </button>
+        <form class="modal-form">
+          <label for="name" class="form-label"
+            ><span class="form-label-name">Name</span>
+            <div class="form-label-container">
+              <input type="name" id="name" class="form-input" name="fullname" />
+              <svg class="form-label-svg" width="18" height="24">
+                <use
+                  class="form-labbel-icon"
+                  href="/images/symbol-defs .svg#icon-person"
+                ></use>
+              </svg>
+            </div>
+          </label>
+          <label for="phone" class="form-label"
+            ><span class="form-label-name">Phone</span>
+            <div class="form-label-container">
+              <input type="tel" id="phone" class="form-input" name="phone" />
+              <svg class="form-label-svg" width="18" height="24">
+                <use
+                  class="form-labbel-icon"
+                  href="/images/symbol-defs .svg#icon-phone"
+                ></use>
+              </svg>
+            </div>
+          </label>
+          <label for="email" class="form-label"
+            ><span class="form-label-name">Email</span>
+            <div class="form-label-container">
+              <input type="email" id="email" class="form-input" name="email" />
+              <svg class="form-label-svg" width="18" height="24">
+                <use
+                  class="form-labbel-icon"
+                  href="/images/symbol-defs .svg#icon-email"
+                ></use>
+              </svg>
+            </div>
+          </label>
+          <label for="Comment" class="form-label">
+            <span class="form-label-name">Comment</span>
+            <div class="form-label-container">
+              <textarea
+                name="Comment"
+                id="Comment"
+                cols="30"
+                rows="5"
+                class="form-textarea"
+                placeholder="Text input"
+              ></textarea>
+            </div>
+          </label>
+          <button type="submit" class="form-btn btn">Send</button>
+        </form>
       </div>
     </div>
     <script src="modal.js"></script>
