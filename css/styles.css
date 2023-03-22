@@ -4,6 +4,7 @@ body {
   color: var(--main-title-color);
 }
 :root {
+  --label-name-color: #8e8f99;
   --main-title-color: #2e2f42;
   --secondary-title-color: #ffffff;
   --main-button-color: #4d5ae5;
@@ -273,7 +274,7 @@ a {
   display: flex;
   height: 112px;
   width: 100%;
-  background: #f4f4fd;
+  background: var(--main-background-color);
   justify-content: center;
   text-align: center;
 }
@@ -348,7 +349,7 @@ a {
   color: var(--secondary-link-color);
 }
 .team-list-name {
-  background: #ffffff;
+  background: var(--secondary-title-color);
   box-shadow: var(--main-box-shadow);
   border-radius: 0px 0px 4px 4px;
   padding: 32px 16px;
@@ -542,7 +543,8 @@ a {
   color: var(--main-button-color);
   background-color: var(--main-background-color);
   cursor: pointer;
-  transition: var(--trantsition-duraction-background);
+  transition: var(--trantsition-duraction-background),
+    var(--trantsition-duraction-color), var(--trantsition-duraction-shadow);
 }
 .hero-portfolio-btn-all {
   font-weight: 500;
@@ -634,6 +636,7 @@ a {
   background-color: var(--main-button-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-color: transparent;
 }
 .backdrop {
   position: fixed;
@@ -692,6 +695,7 @@ a {
   background-color: var(--main-button-color);
 }
 .modal-title {
+  margin-bottom: 16px;
   text-align: center;
   font-weight: 500;
   font-size: 16px;
@@ -701,7 +705,7 @@ a {
 
 .form-input {
   padding-left: 38px;
-  border: 1px solid #8e8f99;
+  border: 1px solid var(--label-name-color);
   border-radius: 4px;
   height: 40px;
   width: 100%;
@@ -709,6 +713,8 @@ a {
 }
 
 .form-label {
+  margin-bottom: 8px;
+  display: block;
 }
 .form-label-container {
   position: relative;
@@ -718,11 +724,14 @@ a {
 .form-label-name {
   display: block;
   margin-bottom: 4px;
-  margin-top: 8px;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.04em;
-  color: #8e8f99;
+  color: var(--label-name-color);
+}
+
+.last-label {
+  margin-bottom: 0px;
 }
 .form-label-svg {
   display: block;
@@ -751,7 +760,7 @@ a {
   justify-content: center;
   align-items: center;
   padding: 16px 32px;
-  background: #4d5ae5;
+  background: var(--main-button-color);
   color: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -763,6 +772,14 @@ a {
   font-size: 16px;
   line-height: 1.5;
   margin-top: 24px;
+  transition: var(--trantsition-duraction-background),
+    var(--trantsition-duraction-shadow);
+}
+.form-btn:hover {
+  background-color: var(--main-underline-color);
+}
+.form-btn:focus {
+  background-color: var(--main-underline-color);
 }
 .form-textarea {
   padding-left: 16px;
@@ -772,7 +789,7 @@ a {
   line-height: 1.16;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
-  border: 1px solid #8e8f99;
+  border: 1px solid var(--label-name-color);
   border-radius: 4px;
   transition: border 250ms var(--timing);
   resize: none;
@@ -789,10 +806,11 @@ a {
 }
 
 .checkbox {
+  margin-top: 16px;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.04em;
-  color: #8e8f99;
+  color: var(--label-name-color);
   display: flex;
   align-items: center;
 }
@@ -832,6 +850,13 @@ a {
   line-height: 1.5;
   color: var(--secondary-title-color);
   border: none;
+  transition: var(--trantsition-duraction-background);
+}
+.footer-btn:hover {
+  background-color: var(--main-underline-color);
+}
+.footer-btn:focus {
+  background-color: var(--main-underline-color);
 }
 .subs-text {
   font-weight: 500;
@@ -843,8 +868,6 @@ a {
 }
 .footer-subs {
   margin-left: 80px;
-  justify-content: center;
-  align-items: center;
 }
 .footer-form {
   display: flex;
